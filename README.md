@@ -11,7 +11,7 @@
 **jQuery validation**: http://bassistance.de/jquery-plugins/jquery-plugin-validation/
 
 # Guidelines
-- Fork the GIT rep
+- Fork or clone the GIT rep
 - Build out the designed form that's in /design/form-challenge.png
 - Allowed libraries/plugins:
 	- Modernizr
