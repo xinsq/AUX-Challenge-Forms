@@ -1,6 +1,6 @@
 /*CSS Reset*/
 
-	html, body, div, span, h1, p, a, img, fieldset, input, form, label, select, legend, header {
+	html, body, div, span, h1, p, a, img, fieldset, input, form, label, select, legend, header, li, ol {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -45,28 +45,60 @@ header {
 	background-color: #13637c;
 }
 
-fieldset {
+h1 {
+	color: #f1fcff;
+	font-family: "Antic Slab", helvetica, san-seriff;
+	font-size: 2em;
+}
+
+header p {
+	color: #b4e3ff;
+	font-size: .75em;
+}
+
+form>fieldset {
 	padding: 34px 40px;
 	margin: 70px 40px;
 	margin-bottom: 28px;
 	border-radius: 6px;
 	background-color: #f3f5f5;
+	position: relative;
 }
 
-form fieldset:first-of-type {
+fieldset span:first-of-type {
+	position: absolute;
+	top: -25px;
+	left: -16px;
+	color: #2b5268;
+	font-family: "Antic Slab", helvetica, san-seriff;
+	font-size: 1.25em;
+}
+
+fieldset p {
+	margin-top: 10px;
+	font-size: 0.8em;
+	color: #a4a2a2;
+}
+
+form>fieldset:first-of-type {
 	margin-top: 60px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
-	width: 100%;
-	height: 33px;
-	border-top: 1px #cbcbcb solid;
+li{
+	margin-bottom: 15px;
+	list-style-type: none;
 }
 
 input {
 	margin-top: 8px;
 	border-radius: 5px;
 	font-size: .8em;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	width: 100%;
+	height: 33px;
+	border-top: 1px #cbcbcb solid;
 }
 
 select {
@@ -87,38 +119,12 @@ input[type="submit"] {
 	color: #ffffff;
 }
 
-h1 {
-	color: #f1fcff;
-	font-family: "Antic Slab", helvetica, san-seriff;
-	font-size: 2em;
-}
-
-header p {
-	color: #b4e3ff;
-	font-size: .75em;
-}
-
-fieldset {
-	position: relative;
-}
-
-fieldset span:first-of-type {
-	position: absolute;
-	top: -25px;
-	left: -16px;
-	color: #2b5268;
-	font-family: "Antic Slab", helvetica, san-seriff;
-	font-size: 1.25em;
-}
-
-fieldset p {
-	margin-top: 10px;
-	font-size: 0.8em;
-	color: #a4a2a2;
-}
-
 select {
 	height: 25px;
+}
+
+label {
+	display: block;
 }
 
 #portfolioAddress-left {
@@ -133,35 +139,40 @@ select {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	text-align: center;
-	float: left;
+	float: right;
 }
 
 #cardNumber {
 	width: 238px;
-}
+	float: left;
 
-#cardNumber {
 }
 
 #cardImg {
 	width: 189px;
 	height: 32px;
 	margin-top: 7px;
+	margin-left: 10px;
 	background-repeat: no-repeat;
 	background-image: url('../images/sprite.png');
 	background-position: 0 -122px;
+	display: inline-block;
 }
 
 #security {
+	
 }
 
 #securityImg {
 	width: 70px;
 	height: 32px;
 	margin-top: 7px;
+	margin-left: 10px;
 	background-repeat: no-repeat;
 	background-image: url('../images/sprite.png');
-	background-position: 0 -122px;
+	background-position: 0 -150px;
+	display: inline-block;
+
 }
 
 #security {

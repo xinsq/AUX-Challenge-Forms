@@ -14,66 +14,95 @@
 
 			<fieldset>
 				<legend><span>1 First, name your portfolio</span></legend>
-				<label for="portfolioTitle">Portfolio title</label><br>
-				<input type="text" id="portfolioTitle">
-				<br>
-				<label for="portfolioAddress-right"><br>Portfolio address</label><br>
-				<input type="text" id="portfolioAddress-left">
-				<input type="text" id="portfolioAddress-right" placeholder=".sample.com">
+				<ol>
+					<li>
+						<label for="portfolioTitle">Portfolio title</label>
+						<input type="text" id="portfolioTitle">
+					</li>
+					<li>
+						<label for="portfolioAddress-right">Portfolio address</label>
+						<input type="text" id="portfolioAddress-left">
+						<input type="text" id="portfolioAddress-right" placeholder=".sample.com">
+					</li>
+				</ol>
 			</fieldset>
 
 			<fieldset>
-				<legend><span>2 Now, enter your account details</legend></span>
-				<label for="name">Name</label><br>
-				<input type="text" id="name">
-				<br>
-				<label for="email">Email</label><br>
-				<input type="email" id="email">
-				<p>NOTE: We'll never share your email, promise.</p>
-				<label for="password">Password</label><br>
-				<input type="password" id="password">
-				<br>
-				<input type="checkbox" id="showPassword">
-				<label for="showPassword">Show password</label>
+				<legend><span>2 Now, enter your account details</span></legend>
+				<ol>
+					<li><label for="name">Name</label>
+						<input type="text" id="name">
+					</li>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" id="email">
+					</li>
+					<li>NOTE: We'll never share your email, promise.</li>
+					<li><label for="password">Password</label>
+						<input type="password" id="password">
+					</li>
+					<li>
+						<label for="showPassword"><input type="checkbox" id="showPassword">Show password</label>
+					</li>
+				</ol>
 			</fieldset>
 
 			<fieldset>
 				<legend><span>3 Finally, enter your payment information</span></legend>
-				<a href="">Use PayPal</a>
-				<br>
-				<label for="cardNumber">Card number</label><br>
-				<input type="text" id="cardNumber">
-				<div id="cardImg"></div>
-				<br>
-				<label for="security">Security code</label><br>
-				<input type="text" id="security">
-				<div id="securityImg"></div>
-				<br>
-				<label for="">Expiration date</label><br>
-				<select name="Month" id="month">
-					<option disabled="disabled" selected>Month</month>
-					<option value="">January</option>
-					<option value="">February</option>
-					<option value="">March</option>
-					<option value="">April</option>
-					<option value="">May</option>
-					<option value="">June</option>
-					<option value="">July</option>
-					<option value="">August</option>
-					<option value="">September</option>
-					<option value="">October</option>
-					<option value="">November</option>
-					<option value="">December</option>
-				</select>
-				<select name="Year" id="year">
-					<option disabled="disabled" selected>Year</month>
-					<option value="2013">2013</option>
-					<option value="2014">2014</option>
-					<option value="2015">2015</option>
-					<option value="2016">2016</option>
-					<option value="2017">2017</option>
-					<option value="2018">2018</option>
-				</select>
+				<ol>
+					<li><a href="">Use PayPal</a></li>
+					<li>
+						<label for="cardNumber">Card number</label>
+						<input type="text" id="cardNumber">
+						<div id="cardImg"></div>
+					</li>
+					<li>
+						<label for="security">Security code</label>
+						<input type="text" id="security">
+						<div id="securityImg"></div><br>
+					</li>
+					<li>
+						<fieldset>
+							<legend>Expiration date</legend>
+							<select name="Month" id="month">
+								<option disabled="disabled" selected>Month</month>
+								<option value="">January</option>
+								<option value="">February</option>
+								<option value="">March</option>
+								<option value="">April</option>
+								<option value="">May</option>
+								<option value="">June</option>
+								<option value="">July</option>
+								<option value="">August</option>
+								<option value="">September</option>
+								<option value="">October</option>
+								<option value="">November</option>
+								<option value="">December</option>
+							</select>
+							<select name="Year" id="year">
+								<option disabled="disabled" selected>Year</month>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+								<option value="2023">2023</option>
+								<option value="2024">2024</option>
+								<option value="2025">2025</option>
+								<option value="2026">2026</option>
+								<option value="2027">2027</option>
+								<option value="2028">2028</option>
+								<option value="2029">2029</option>
+								<option value="2030">2030</option>
+							</select>
+						</fieldset>
+					</li>
+				</ol>
 			</fieldset>
 
 			<input type="submit" value="Create your portfolio">

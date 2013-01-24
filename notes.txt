@@ -1,6 +1,15 @@
 there is month and year but only one label
-where to put legend/numbers- inside fieldset
+where to put legend/numbers- inside fieldset?
 portfolio address
 zoom in causes portfolio address to break
+
+Where does the (1),(2), and (3) belong in the HTML?
+
+
+let screen readers know that they can click on labels:
+label {  
+cursor:hand;  
+}
+
 
 border-right: 1px #ebebeb solid;
