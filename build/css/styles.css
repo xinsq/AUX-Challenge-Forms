@@ -4,7 +4,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 1em;
+		font-size: 12px;
 		color: #5a5a5a;
 		font-family: "Lucida Grande",Arial, Verdana, sans-serif;
 		vertical-align: baseline;
@@ -26,7 +26,12 @@
 }
 
 body {
-	background-color: #b3e3ff;
+	background: #b3e3ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b3e3ff 0%, #abe0ff 97%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3e3ff), color-stop(97%,#abe0ff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #b3e3ff 0%,#abe0ff 97%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #b3e3ff 0%,#abe0ff 97%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #b3e3ff 0%,#abe0ff 97%); /* IE10+ */
 }
 
 form {
@@ -42,18 +47,25 @@ header {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	border: 1px #146c86 solid;
-	background-color: #13637c;
+	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+	background: #167893; /* Old browsers */
+	background: -moz-linear-gradient(top, #167893 0%, #125e77 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#167893), color-stop(100%,#125e77)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #167893 0%,#125e77 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #167893 0%,#125e77 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #167893 0%,#125e77 100%); /* IE10+ */
 }
 
 h1 {
+	margin-bottom: 10px;
 	color: #f1fcff;
 	font-family: "Antic Slab", helvetica, san-seriff;
-	font-size: 2em;
+	font-size: 36px;
 }
 
 header p {
 	color: #b4e3ff;
-	font-size: .75em;
+	font-size: 10px;
 }
 
 form>fieldset {
@@ -65,28 +77,54 @@ form>fieldset {
 	position: relative;
 }
 
-fieldset span:first-of-type {
+legend h2 {
 	position: absolute;
-	top: -25px;
-	left: -16px;
+	top: -45px;
+	left: 0px;
 	color: #2b5268;
 	font-family: "Antic Slab", helvetica, san-seriff;
-	font-size: 1.25em;
+	font-size: 20px;
 }
 
-fieldset p {
+legend div {
+	position: absolute;
+	left: -60px;
+	top: -38px;
+	width: 30px;
+	height: 30px;
+	border: 6px #ffffff solid;
+	border-radius: 20px;
+	background-color: #52a3d4;
+}
+
+legend p {
 	margin-top: 10px;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+fieldset li {
+	margin-top: 20px;
 	font-size: 0.8em;
 	color: #a4a2a2;
+	list-style-type: none
+}
+
+fieldset li:first-of-type {
+	margin-top: 0;
+}
+
+fieldset a {
+	position: absolute;
+	right: 0px;
+	top: -20px;
+	color: #69c8ff;
+	text-decoration: none;
 }
 
 form>fieldset:first-of-type {
 	margin-top: 60px;
-}
-
-li{
-	margin-bottom: 15px;
-	list-style-type: none;
 }
 
 input {
@@ -97,8 +135,10 @@ input {
 
 input[type="text"], input[type="email"], input[type="password"] {
 	width: 100%;
+	font-size: 12px;
 	height: 33px;
 	border-top: 1px #cbcbcb solid;
+	box-shadow: inset 0px 1px 1px rgba(238, 238, 238, 1);
 }
 
 select {
@@ -111,11 +151,18 @@ input[type="submit"] {
 	display: block;
 	margin: auto;
 	background-color: #86a22f;
+	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+	background: #90a932; /* Old browsers */
+	background: -moz-linear-gradient(top, #90a932 0%, #7e9b32 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#90a932), color-stop(100%,#7e9b32)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #90a932 0%,#7e9b32 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #90a932 0%,#7e9b32 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #90a932 0%,#7e9b32 100%); /* IE10+ */
 	width: 218px;
 	height: 37px;
 	border:1px #7b992b solid;
 	font-family: "Antic Slab", helvetica, san-seriff;
-	font-size: 1.15em;
+	font-size: 20px;
 	color: #ffffff;
 }
 
@@ -131,6 +178,7 @@ label {
 	width: 65.9%;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+	box-shadow: inset 0 1px 1px 0px rgba(238, 238, 238, 1);
 	float: left;
 }
 
@@ -138,8 +186,13 @@ label {
 	width: 34.1%;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
+	background-color: #fafafa;
 	text-align: center;
 	float: right;
+}
+
+#showPassword {
+	float: left;
 }
 
 #cardNumber {
@@ -151,7 +204,7 @@ label {
 #cardImg {
 	width: 189px;
 	height: 32px;
-	margin-top: 7px;
+	margin-top: 8px;
 	margin-left: 10px;
 	background-repeat: no-repeat;
 	background-image: url('../images/sprite.png');
@@ -160,17 +213,17 @@ label {
 }
 
 #security {
-	
+	float: left;
 }
 
 #securityImg {
 	width: 70px;
-	height: 32px;
+	height: 33px;
 	margin-top: 7px;
 	margin-left: 10px;
 	background-repeat: no-repeat;
 	background-image: url('../images/sprite.png');
-	background-position: 0 -150px;
+	background-position: 0 -331px;
 	display: inline-block;
 
 }
