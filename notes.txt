@@ -1,0 +1,6 @@
+there is month and year but only one label
+where to put legend/numbers- inside fieldset
+portfolio address
+zoom in causes portfolio address to break
+
+border-right: 1px #ebebeb solid;

@@ -3,47 +3,55 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Xin Xin Challenge 0</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	</head>
 	<body>
 		<form>
-			<h1>Sign up for Whoo!</h1>
-			<p>50 projects, 500 images, 10 videos, domain binding, and technical support</p>
+			<header>
+				<h1>Sign up for Whoo!</h1>
+				<p>50 projects, 500 images, 10 videos, domain binding, and technical support</p>
+			</header>
 
 			<fieldset>
-				<legend>First, name your portfolio</legend>
-				<label for="">Portfolio title</label>
-				<input type="text">
+				<legend><span>1 First, name your portfolio</span></legend>
+				<label for="portfolioTitle">Portfolio title</label><br>
+				<input type="text" id="portfolioTitle">
 				<br>
-				<label for="">Portfolio address</label>
-				<input type="text">
+				<label for="portfolioAddress-right"><br>Portfolio address</label><br>
+				<input type="text" id="portfolioAddress-left">
+				<input type="text" id="portfolioAddress-right" placeholder=".sample.com">
 			</fieldset>
 
 			<fieldset>
-				<legend>Now, enter your account details</legend>
-				<label for="">Name</label>
-				<input type="text">
+				<legend><span>2 Now, enter your account details</legend></span>
+				<label for="name">Name</label><br>
+				<input type="text" id="name">
 				<br>
-				<label for=""> Email</label>
-				<input type="email">
-				<p>NOTE: We'll never share your email, promise</p>
-				<label for="">Password</label>
-				<input type="password">
+				<label for="email">Email</label><br>
+				<input type="email" id="email">
+				<p>NOTE: We'll never share your email, promise.</p>
+				<label for="password">Password</label><br>
+				<input type="password" id="password">
 				<br>
-				<input type="checkbox">
-				<label for="">Show password</label>
+				<input type="checkbox" id="showPassword">
+				<label for="showPassword">Show password</label>
 			</fieldset>
 
 			<fieldset>
-				<legend>Finally, enter your payment information</legend>
-				<label for="">Card number</label>
-				<input type="text">
+				<legend><span>3 Finally, enter your payment information</span></legend>
+				<a href="">Use PayPal</a>
 				<br>
-				<label for="">Security code</label>
-				<input type="">
+				<label for="cardNumber">Card number</label><br>
+				<input type="text" id="cardNumber">
+				<div id="cardImg"></div>
 				<br>
-				<label for="">Expiration date</label>
-				<select name="Month">
-					<option disabled="disabled">Month</month>
+				<label for="security">Security code</label><br>
+				<input type="text" id="security">
+				<div id="securityImg"></div>
+				<br>
+				<label for="">Expiration date</label><br>
+				<select name="Month" id="month">
+					<option disabled="disabled" selected>Month</month>
 					<option value="">January</option>
 					<option value="">February</option>
 					<option value="">March</option>
@@ -57,18 +65,22 @@
 					<option value="">November</option>
 					<option value="">December</option>
 				</select>
-				<select name="Year">
-					<option disabled="disabled">Year</month>
+				<select name="Year" id="year">
+					<option disabled="disabled" selected>Year</month>
 					<option value="2013">2013</option>
 					<option value="2014">2014</option>
 					<option value="2015">2015</option>
-					<option value="2016">2010</option>
-					<option value="2017">2009</option>
-					<option value="2018">2008</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
 				</select>
 			</fieldset>
 
-			<input type="submit">
+			<input type="submit" value="Create your portfolio">
 		</form>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/mustache.js"></script>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.0/mustache.min.js"></script>-->
 	</body>
 </html>
