@@ -144,6 +144,7 @@ fieldset a {
 
 label {
 	margin-bottom: 8px;
+	cursor: hand; /*Let screen readers know labels are clickable*/
 	display: block;
 }
 

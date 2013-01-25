@@ -8,24 +8,24 @@
 
 		<form id="signUp" novalidate="novalidate">
 
-			<header>
+			<header role="banner">
 				<h1>Sign up for Whoo!</h1>
 				<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
 			</header>
 
-			<ol>
+			<ol role="form">
 
 				<li>
 					<fieldset>
-						<h2>First, name your portfolio</h2>
-						<ul>
+						<h2 id="portfolioHeading">First, name your portfolio</h2>
+						<ul aria-labelledby="portfolioHeading">
 							<li>
 								<label for="title">Portfolio title</label>
-								<input type="text" name="title" id="title">
+								<input type="text" name="title" id="title" aria-required="true">
 							</li>
 							<li>
 								<label for="address">Portfolio address</label>
-								<input type="text" name="address" id="address"><input type="text" id="addressFull" placeholder=".sample.com" disabled="disabled">
+								<input type="text" name="address" id="address"><input type="text" id="addressFull" placeholder=".sample.com" disabled="disabled" aria-disabled="true" aria-required="false">
 							</li>
 						</ul>
 					</fieldset>
@@ -33,20 +33,20 @@
 
 				<li>
 					<fieldset>
-						<h2>Now, enter your account details</h2>
-						<ul>
+						<h2 id="accountHeading">Now, enter your account details</h2>
+						<ul aria-labelledby="accountHeading">
 							<li>
 								<label for="name">Name</label>
-								<input type="text" name="name" id="name">
+								<input type="text" name="name" id="name" aria-required="true">
 							</li>
 							<li>
 								<label for="email">Email</label>
-								<input type="email" name="email" id="email">
+								<input type="email" name="email" id="email" aria-required="true">
 								<p>NOTE: We'll never share your email, promise.</p>
 							</li>
 							<li>
 								<label for="password">Password</label>
-								<input type="password" name="password" id="password">
+								<input type="password" name="password" id="password" aria-required="true">
 							</li>
 						</ul>
 					</fieldset>
@@ -54,20 +54,20 @@
 
 				<li>
 					<fieldset>
-						<h2>Finally, enter your payment information</h2>
+						<h2 id="paymentHeader">Finally, enter your payment information</h2>
 						<a href="">Use PayPal</a>
-						<ul>
+						<ul aria-labelledby="accountHeading">
 							<li id="cardNumberLi">
 								<label for="cardNumber">Card number</label>
-								<input type="text" name="cardNumber" id="cardNumber">
+								<input type="text" name="cardNumber" id="cardNumber" aria-required="true">
 							</li>
 							<li id="securityLi">
 								<label for="security">Security code</label>
-								<input type="text" name="security" id="security">
+								<input type="text" name="security" id="security" aria-required="true">
 							</li>
 							<li>
-								<label>Expiration date</label>
-								<select name="month" id="month">
+								<label for="month year">Expiration date</label>
+								<select name="month" id="month" aria-label="Month">
 									<option disabled="disabled" selected>Month</month>
 									<option value="January">January</option>
 									<option value="February">February</option>
@@ -81,7 +81,8 @@
 									<option value="October">October</option>
 									<option value="November">November</option>
 									<option value="December">December</option>
-								</select><select name="Year" id="year">
+								</select>
+								<select name="Year" id="year" aria-label="Year" aria-required="true">
 									<option disabled="disabled" selected>Year</month>
 									<option value="2013">2013</option>
 									<option value="2014">2014</option>
@@ -109,7 +110,7 @@
 
 			</ol>
 
-			<input type="submit" value="Create your own portfolio">
+			<input type="submit" value="Create your own portfolio" role="button">
 
 <!-- 
 		<script src="js/lib/jquery.js"></script>
