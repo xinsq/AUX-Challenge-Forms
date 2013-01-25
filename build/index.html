@@ -1,116 +1,117 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>Xin Xin Challenge 0</title>
+		<title>Challenge 0: Xin Xin</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	</head>
 	<body>
+
 		<form>
+
 			<header>
 				<h1>Sign up for Whoo!</h1>
-				<p>50 projects, 500 images, 10 videos, domain binding, and technical support</p>
+				<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
 			</header>
 
-			<fieldset>
-				<legend><div><p>1</p></div><h2>First, name your portfolio</h2></legend>
-				<ol>
-					<li>
-						<label for="portfolioTitle">Portfolio title</label>
-						<input type="text" id="portfolioTitle">
-					</li>
-					<li>
-						<label for="portfolioAddress-right">Portfolio address</label>
-						<input type="text" id="portfolioAddress-left">
-						<input type="text" id="portfolioAddress-right" placeholder=".sample.com" disabled="disabled">
-					</li>
-				</ol>
-			</fieldset>
+			<ol>
 
-			<fieldset>
-				<legend><div><p>2</p></div><h2>Now, enter your account details</h2></legend>
-				<ol>
-					<li><label for="name">Name</label>
-						<input type="text" id="name">
-					</li>
-					<li>
-						<label for="email">Email</label>
-						<input type="email" id="email">
-					</li>
-					<li>NOTE: We'll never share your email, promise.</li>
-					<li><label for="password">Password</label>
-						<input type="password" id="password">
-					</li>
-					<li>
-						<input type="checkbox" id="showPassword">
-						<label for="showPassword">Show password</label>
-					</li>
-				</ol>
-			</fieldset>
+				<li>
+					<fieldset>
+						<h2>First, name your portfolio</h2>
+						<ul>
+							<li>
+								<label for="title">Portfolio title</label>
+								<input type="text" id="title">
+							</li>
+							<li>
+								<label for="address">Portfolio address</label>
+								<input type="text" id="address"><input type="text" id="addressFull" placeholder=".sample.com" disabled="disabled">
+							</li>
+						</ul>
+					</fieldset>
+				</li>
 
-			<fieldset>
-				<legend><div><p>3</p></div><h2>First, name your portfolio</h2></legend>
-				<a href="">Use PayPal</a>
-				<ol>
-					<li>
-						<label for="cardNumber">Card number</label>
-						<input type="text" id="cardNumber">
-						<div id="cardImg"></div>
-					</li>
-					<li>
-						<label for="security">Security code</label>
-						<input type="text" id="security">
-						<div id="securityImg"></div><br>
-					</li>
-					<li>
-						<fieldset>
-							<legend>Expiration date</legend>
-							<select name="Month" id="month">
-								<option disabled="disabled" selected>Month</month>
-								<option value="">January</option>
-								<option value="">February</option>
-								<option value="">March</option>
-								<option value="">April</option>
-								<option value="">May</option>
-								<option value="">June</option>
-								<option value="">July</option>
-								<option value="">August</option>
-								<option value="">September</option>
-								<option value="">October</option>
-								<option value="">November</option>
-								<option value="">December</option>
-							</select>
-							<select name="Year" id="year">
-								<option disabled="disabled" selected>Year</month>
-								<option value="2013">2013</option>
-								<option value="2014">2014</option>
-								<option value="2015">2015</option>
-								<option value="2016">2016</option>
-								<option value="2017">2017</option>
-								<option value="2018">2018</option>
-								<option value="2019">2019</option>
-								<option value="2020">2020</option>
-								<option value="2021">2021</option>
-								<option value="2022">2022</option>
-								<option value="2023">2023</option>
-								<option value="2024">2024</option>
-								<option value="2025">2025</option>
-								<option value="2026">2026</option>
-								<option value="2027">2027</option>
-								<option value="2028">2028</option>
-								<option value="2029">2029</option>
-								<option value="2030">2030</option>
-							</select>
-						</fieldset>
-					</li>
-				</ol>
-			</fieldset>
+				<li>
+					<fieldset>
+						<h2>Now, enter your account details</h2>
+						<ul>
+							<li>
+								<label for="name">Name</label>
+								<input type="text" id="name">
+							</li>
+							<li>
+								<label for="email">Email</label>
+								<input type="email" id="email">
+								<p>NOTE: We'll never share your email, promise.</p>
+							</li>
+							<li>
+								<label for="password">Password</label>
+								<input type="password" id="password">
+							</li>
+						</ul>
+					</fieldset>
+				</li>
 
-			<input type="submit" value="Create your portfolio">
+				<li>
+					<fieldset>
+						<h2>Finally, enter your payment information</h2>
+						<a href="">Use PayPal</a>
+						<ul>
+							<li id="cardNumberLi">
+								<label for="cardNumber">Card number</label>
+								<input type="text" id="cardNumber">
+							</li>
+							<li id="securityLi">
+								<label for="security">Security code</label>
+								<input type="text" id="security">
+							</li>
+							<li>
+								<label>Expiration date</label>
+								<select name="month" id="month">
+									<option disabled="disabled" selected>Month</month>
+									<option value="January">January</option>
+									<option value="February">February</option>
+									<option value="March">March</option>
+									<option value="April">April</option>
+									<option value="May">May</option>
+									<option value="June">June</option>
+									<option value="July">July</option>
+									<option value="August">August</option>
+									<option value="September">September</option>
+									<option value="October">October</option>
+									<option value="November">November</option>
+									<option value="December">December</option>
+								</select><select name="Year" id="year">
+									<option disabled="disabled" selected>Year</month>
+									<option value="2013">2013</option>
+									<option value="2014">2014</option>
+									<option value="2015">2015</option>
+									<option value="2016">2016</option>
+									<option value="2017">2017</option>
+									<option value="2018">2018</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+									<option value="2021">2021</option>
+									<option value="2022">2022</option>
+									<option value="2023">2023</option>
+									<option value="2024">2024</option>
+									<option value="2025">2025</option>
+									<option value="2026">2026</option>
+									<option value="2027">2027</option>
+									<option value="2028">2028</option>
+									<option value="2029">2029</option>
+									<option value="2030">2030</option>
+								</select>
+							</li>
+						</ul>
+					</fieldset>
+				</li>
+
+			</ol>
+
+			<input type="submit" value="Create your own portfolio">
+
 		</form>
 
-		<script src="js/jquery.js"></script>
-		<script src="js/mustache.js"></script>
-	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.0/mustache.min.js"></script>-->
 	</body>
 </html>
