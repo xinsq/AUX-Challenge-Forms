@@ -204,6 +204,7 @@ input[type="submit"] {
 	width: 189px;
 	height: 32px;
 	display: inline-block;
+	float: left;
 	background: url('../images/sprite.png') no-repeat 0 -122px;
 }
 
