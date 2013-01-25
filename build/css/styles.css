@@ -82,13 +82,18 @@ ol>li:before {
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
-    width: 34px;
-    height: 34px;
+    width: 39px;
+    height: 39px;
+    margin-left: -55px;
+    margin-top: -8px;
+    padding-top: 6px;
     border: 6px #ffffff solid;
-    border-radius: 17px;
+    border-radius: 20px;
+    background-color: #52a3d4;
     color: #ffffff;
     text-align: center;
-    background-color: #52a3d4;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 fieldset h2 {
@@ -110,6 +115,7 @@ ol>li:last-of-type>fieldset>ul:after {
 	position: absolute;
 	width: 14px;
 	height: 19px;
+	margin-left: 450px;
 	background: url('../images/sprite.png') no-repeat -60px -499px;
 }
 
@@ -149,6 +155,7 @@ input[type="email"], input[type="text"], input[type="password"] {
 	box-shadow: inset 0px 1px 1px rgba(238, 238, 238, 1);
 	border-radius: 5px;
  	box-sizing: border-box;
+ 	font-size: 14px;
 }
 
 #address {
@@ -165,6 +172,7 @@ input[type="email"], input[type="text"], input[type="password"] {
 	border-bottom-left-radius: 0;
 	background-color: #fafafa;
 	text-align: center;
+	font-family: "Lucida Grande",Arial, Verdana, sans-serif;
 }
 
 input[type="submit"] {
