@@ -6,7 +6,7 @@
 	</head>
 	<body>
 
-		<form>
+		<form id="signUp" novalidate="novalidate">
 
 			<header>
 				<h1>Sign up for Whoo!</h1>
@@ -21,11 +21,11 @@
 						<ul>
 							<li>
 								<label for="title">Portfolio title</label>
-								<input type="text" id="title">
+								<input type="text" name="title" id="title">
 							</li>
 							<li>
 								<label for="address">Portfolio address</label>
-								<input type="text" id="address"><input type="text" id="addressFull" placeholder=".sample.com" disabled="disabled">
+								<input type="text" name="address" id="address"><input type="text" id="addressFull" placeholder=".sample.com" disabled="disabled">
 							</li>
 						</ul>
 					</fieldset>
@@ -37,16 +37,16 @@
 						<ul>
 							<li>
 								<label for="name">Name</label>
-								<input type="text" id="name">
+								<input type="text" name="name" id="name">
 							</li>
 							<li>
 								<label for="email">Email</label>
-								<input type="email" id="email">
+								<input type="email" name="email" id="email">
 								<p>NOTE: We'll never share your email, promise.</p>
 							</li>
 							<li>
 								<label for="password">Password</label>
-								<input type="password" id="password">
+								<input type="password" name="password" id="password">
 							</li>
 						</ul>
 					</fieldset>
@@ -59,11 +59,11 @@
 						<ul>
 							<li id="cardNumberLi">
 								<label for="cardNumber">Card number</label>
-								<input type="text" id="cardNumber">
+								<input type="text" name="cardNumber" id="cardNumber">
 							</li>
 							<li id="securityLi">
 								<label for="security">Security code</label>
-								<input type="text" id="security">
+								<input type="text" name="security" id="security">
 							</li>
 							<li>
 								<label>Expiration date</label>
@@ -111,7 +111,9 @@
 
 			<input type="submit" value="Create your own portfolio">
 
-		</form>
+<!-- 
+		<script src="js/lib/jquery.js"></script>
 
+ -->		</form>
 	</body>
 </html>
