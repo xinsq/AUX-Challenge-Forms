@@ -157,7 +157,7 @@ fieldset>ul>li>p {
 
 fieldset a {
 	position: relative;
-	top: 8px;
+	top: -23px;
 	color: #69c8ff;
 	text-decoration: none;
 	vertical-align: bottom;
@@ -178,6 +178,7 @@ input[type="email"], input[type="text"], input[type="password"] {
 	box-shadow: inset 0px 1px 1px rgba(238, 238, 238, 1);
 	border-radius: 5px;
  	box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
  	font-size: 14px;
 }
 
@@ -191,6 +192,7 @@ input[type="email"], input[type="text"], input[type="password"] {
 
 #addressFull {
 	width: 34.1%;
+	float: right;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	background-color: #fafafa;
@@ -215,13 +217,43 @@ input[type="submit"] {
 	color: #ffffff;
 }
 
+
+/* box-shadow: 0 0 2px 2px #d45252; */
+input:focus:invalid + .validation {
+	display: block;
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	float: right;
+	margin-top: -25px;
+	margin-left: 410px;
+    background: url('../images/sprite.png') no-repeat -2px -499px;
+    z-index: 9999;
+}
+
+input:focus:valid + .validation {
+	display: block;
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	float: right;
+	margin-top: -25px;
+	margin-left: 410px;
+    background: url('../images/sprite.png') no-repeat -31px -499px;
+    z-index: 9999;
+}
+
+*:focus {
+	outline: none;
+}
+
 #cardNumber {
 	width: 238px;
 	float: left;
 
 }
 
-#cardNumberLi:after {
+#cardNumberLi::after {
 	content: "";
 	margin-left: 10px;
 	width: 189px;
@@ -235,7 +267,7 @@ input[type="submit"] {
 	float: left;
 }
 
-#securityLi:after {
+#securityLi::after {
 	content: "";
 	margin-left: 10px;
 	width: 70px;
@@ -256,7 +288,7 @@ input[type="submit"] {
 
 select {
 	height: 24px;
-	padding: 0 7px;
+	padding-left: 7px;
 	border: 1px #d5d7d7 solid;
 }
 

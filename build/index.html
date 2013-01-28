@@ -17,11 +17,12 @@
 
 				<li>
 					<fieldset>
-						<h2 id="portfolioHeading">First, name your portfolio</h2>
+						<legend><h2 id="portfolioHeading">First, name your portfolio</h2></legend>
 						<ul aria-labelledby="portfolioHeading">
 							<li>
 								<label for="title">Portfolio title</label>
 								<input type="text" name="title" id="title" aria-required="true" required>
+								<div class="validation"></div>
 							</li>
 							<li>
 								<label for="address">Portfolio address</label>
@@ -33,20 +34,23 @@
 
 				<li>
 					<fieldset>
-						<h2 id="accountHeading">Now, enter your account details</h2>
+						<legend><h2 id="accountHeading">Now, enter your account details</h2></legend>
 						<ul aria-labelledby="accountHeading">
 							<li>
 								<label for="name">Name</label>
 								<input type="text" name="name" id="name" aria-required="true" required>
+								<div class="validation"></div>
 							</li>
 							<li>
 								<label for="email">Email</label>
 								<input type="email" name="email" id="email" aria-required="true" required>
+								<div class="validation"></div>
 								<p>NOTE: We'll never share your email, promise.</p>
 							</li>
 							<li>
 								<label for="password">Password</label>
 								<input type="password" name="password" id="password" aria-required="true" required>
+								<div class="validation"></div>
 							</li>
 						</ul>
 					</fieldset>
@@ -54,7 +58,7 @@
 
 				<li>
 					<fieldset>
-						<h2 id="paymentHeader">Finally, enter your payment information</h2>
+						<legend><h2 id="paymentHeader">Finally, enter your payment information</h2></legend>
 						<a href="">Use PayPal</a>
 						<ul aria-labelledby="accountHeading">
 							<li id="cardNumberLi">
@@ -63,7 +67,7 @@
 							</li>
 							<li id="securityLi">
 								<label for="security">Security code</label>
-								<input type="text" name="security" id="security" aria-required="true" required>
+								<input type="text" name="security" id="security" pattern="[0-9]{3,4}" aria-required="true" required>
 							</li>
 							<li>
 								<label for="month year">Expiration date</label>
