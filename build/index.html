@@ -59,7 +59,7 @@
 						<ul aria-labelledby="accountHeading">
 							<li id="cardNumberLi">
 								<label for="cardNumber">Card number</label>
-								<input type="text" name="cardNumber" id="cardNumber" aria-required="true" required>
+								<input type="text" name="cardNumber" id="cardNumber" title="Please enter a valid card number." pattern="[0-9]{13,16}" aria-required="true" required>
 							</li>
 							<li id="securityLi">
 								<label for="security">Security code</label>
@@ -112,9 +112,7 @@
 
 			<input type="submit" value="Create your own portfolio" role="button">
 
-<!-- 
-		<script src="js/lib/jquery.js"></script>
-
- -->		</form>
+	</form>
+	<script src="../js/lib/jquery.js"></script>
 	</body>
 </html>

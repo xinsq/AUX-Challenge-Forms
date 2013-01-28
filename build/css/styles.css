@@ -17,6 +17,28 @@
 		list-style: none;
 	}
 
+/*Clearfix*/
+	.clearfix:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+	 
+	.clearfix {
+		display: inline-block;
+	}
+	 
+	html[xmlns] .clearfix {
+		display: block;
+	}
+	 
+	* html .clearfix {
+		height: 1%;
+	}
+
 @font-face {
 	font-family:"Antic Slab";
 	src:url(../fonts/AnticSlab-Regular.ttf);
@@ -195,29 +217,30 @@ input[type="submit"] {
 
 #cardNumber {
 	width: 238px;
+	float: left;
+
 }
 
 #cardNumberLi:after {
 	content: "";
-	position: absolute;
 	margin-left: 10px;
 	width: 189px;
 	height: 32px;
 	display: inline-block;
-	float: left;
 	background: url('../images/sprite.png') no-repeat 0 -122px;
 }
 
 #security {
 	width: 78px;
+	float: left;
 }
 
 #securityLi:after {
 	content: "";
-	position: absolute;
 	margin-left: 10px;
 	width: 70px;
 	height: 33px;
+
 	display: inline-block;
 	background: url('../images/sprite.png') no-repeat 0 -331px;
 }
