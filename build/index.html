@@ -64,13 +64,19 @@
 						<legend><h2 id="paymentHeader">Finally, enter your payment information</h2></legend>
 						<a href="">Use PayPal</a>
 						<ul aria-labelledby="accountHeading">
-							<li id="cardNumberLi">
+							<li>
 								<label for="cardNumber">Card number</label>
 								<input type="text" name="cardNumber" id="cardNumber" title="Please enter a valid card number." pattern="[0-9]{13,16}" aria-required="true" required>
 								<div class="validation" id="cardValidation"></div>
-								<div id="creditCardImg" title="Credit card type"></div>
+								
+								<input id="americanExpress" type="radio" name="creditCardImage" value="AmericanExpress"><label for="americanExpress"></label>
+								<input id="visa" type="radio" name="creditCardImage" value="Visa"><label for="visa"></label>
+								<input id="discover" type="radio" name="creditCardImage" value="Discover"><label for="discover"></label>
+								<input id="masterCard" type="radio" name="creditCardImage" value="MasterCard"><label for="masterCard"></label>
+								<!-- <div id="creditCardImg" title="Credit card type"></div> -->
+
 							</li>
-							<li id="securityLi">
+							<li>
 								<label for="security">Security code</label>
 								<input type="text" name="security" id="security" pattern="[0-9]{3,4}" aria-required="true" required>
 								<div class="validation" id="securityValidation"></div>

@@ -164,7 +164,7 @@ fieldset a {
 	float: right;
 }
 
-label {
+label:first-of-type {
 	margin-bottom: 8px;
 	cursor: hand; /*Let screen readers know labels are clickable*/
 	display: block;
@@ -262,17 +262,57 @@ input:focus:valid + .validation {
 #cardNumber {
 	width: 238px;
 	float: left;
-
 }
 
-#creditCardImg {
+input[type=radio] {
+	width: 45px;
+	height: 32px;
+	margin-right: 3px;
+	opacity: 0;
+	border: 0;
+	display: inline-block;
+}
+
+input[type=radio] + label {
+	position: absolute;
+	margin-left: -48px;
+	width: 45px;
+	height: 32px;
+	opacity: .3;
+}
+
+input[type="radio"]:checked+label {
+	opacity: 1;
+}
+
+#americanExpress {
+	margin-left: 10px;
+}
+
+#americanExpress + label {
+	background: #f3f5f5 url('../images/sprite.png') no-repeat 0 -122px;
+}
+
+#visa + label {
+	background: #f3f5f5 url('../images/sprite.png') no-repeat -48px -122px;
+}
+
+#discover + label {
+	background: #f3f5f5 url('../images/sprite.png') no-repeat -96px -122px;
+}
+
+#masterCard + label {
+	background: #f3f5f5 url('../images/sprite.png') no-repeat -144px -122px;
+
+}
+/*#creditCardImg {
 	content: "";
 	margin-left: 10px;
 	width: 189px;
 	height: 32px;
 	display: inline-block;
 	background: url('../images/sprite.png') no-repeat 0 -122px;
-}
+}*/
 
 #security {
 	width: 78px;
