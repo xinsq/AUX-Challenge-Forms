@@ -265,7 +265,7 @@ input:focus:valid + .validation {
 
 }
 
-#cardNumberLi::after {
+#creditCardImg {
 	content: "";
 	margin-left: 10px;
 	width: 189px;
@@ -279,7 +279,7 @@ input:focus:valid + .validation {
 	float: left;
 }
 
-#securityLi::after {
+#securityImg {
 	content: "";
 	margin-left: 10px;
 	width: 70px;
