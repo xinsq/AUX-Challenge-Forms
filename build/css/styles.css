@@ -267,9 +267,10 @@ input:focus:valid + .validation {
 input[type=radio] {
 	width: 45px;
 	height: 32px;
-	margin-right: 3px;
+	margin-right: 0px;
 	opacity: 0;
-	border: 0;
+	border-left: 2px;
+	border-right: 2px;
 	display: inline-block;
 }
 
@@ -279,6 +280,8 @@ input[type=radio] + label {
 	width: 45px;
 	height: 32px;
 	opacity: .3;
+	box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
 }
 
 input[type="radio"]:checked+label {
