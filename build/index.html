@@ -4,7 +4,7 @@
 		<title>Challenge 0: Xin Xin</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	</head>
-	<body>
+<body>
 
 		<form id="signUp">
 
@@ -12,118 +12,136 @@
 				<h1>Sign up for Whoo!</h1>
 				<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
 			</header>
-
 			<ol role="form">
+			<li>
+				<fieldset id="portfolioField">
+					<legend><h2 id=portfolioHeading"">First, name your portfolio</h2></legend>
+					<ul aria-labelledby="portfolioHeading">
+						<li>
+							<label for="title">Portfolio title</label>
+							<input type="text" id="title" name="title" aria-required="true" required>
+							<div class="validation"></div>
+						</li>
+						<li>
+							<label for="address">Portfolio address</label>
+							<span id="sample" type="text">.sample.com</span>
+							<input type="text" id="address" name="address" aria-required="true" required>
+							<div class="validation"></div>
 
-				<li>
-					<fieldset>
-						<legend><h2 id="portfolioHeading">First, name your portfolio</h2></legend>
-						<ul aria-labelledby="portfolioHeading">
-							<li>
-								<label for="title">Portfolio title</label>
-								<input type="text" name="title" id="title" aria-required="true" required>
-								<div class="validation"></div>
-							</li>
-							<li>
-								<label for="address">Portfolio address</label>
-								<div type="text" id="addressFull">.sample.com</div>
-								<input type="text" name="address" id="address" required>
-								<div class="validation" id="addressValidation"></div>
+						</li>
+					</ul>
+				</fieldset>
+			</li>
 
-							</li>
-						</ul>
-					</fieldset>
-				</li>
+			<li>
+				<fieldset>
+					<legend><h2 id="accountHeading">Now, enter your account details</h2></legend>
+					<ul aria-labelledby="accountHeading">
+						<li>
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" aria-required="true" required>
+							<div class="validation"></div>
+						</li>
+						<li>
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" aria-required="true" required>
+							<div class="validation"></div>
+							<p>NOTE: We'll never share your email, promise.</p>
+						</li>
+						<li>
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password" aria-required="true" required>
+							<div class="validation"></div>
+						</li>
+					</ul>
+				</fieldset>
+			</li>
 
-				<li>
-					<fieldset>
-						<legend><h2 id="accountHeading">Now, enter your account details</h2></legend>
-						<ul aria-labelledby="accountHeading">
-							<li>
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" aria-required="true" required>
-								<div class="validation fullValid"></div>
-							</li>
-							<li>
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" aria-required="true" required>
-								<div class="validation fullValid"></div>
-								<p>NOTE: We'll never share your email, promise.</p>
-							</li>
-							<li>
-								<label for="password">Password</label>
-								<input type="password" name="password" id="password" aria-required="true" required>
-								<div class="validation fullValid"></div>
-							</li>
-						</ul>
-					</fieldset>
-				</li>
-
-				<li>
-					<fieldset>
-						<legend><h2 id="paymentHeader">Finally, enter your payment information</h2></legend>
-						<a href="">Use PayPal</a>
-						<ul aria-labelledby="accountHeading">
-							<li>
-								<label for="cardNumber">Card number</label>
-								<input type="text" name="cardNumber" id="cardNumber" title="Please enter a valid card number." pattern="[0-9]{13,16}" aria-required="true" required>
-								<div class="validation" id="cardValidation"></div>
-								
-								<input id="americanExpress" type="radio" name="creditCardImage" value="AmericanExpress"><label for="americanExpress"></label>
-								<input id="visa" type="radio" name="creditCardImage" value="Visa"><label for="visa"></label>
-								<input id="discover" type="radio" name="creditCardImage" value="Discover"><label for="discover"></label>
-								<input id="masterCard" type="radio" name="creditCardImage" value="MasterCard"><label for="masterCard"></label>
-								<!-- <div id="creditCardImg" title="Credit card type"></div> -->
-
-							</li>
-							<li>
-								<label for="security">Security code</label>
-								<input type="text" name="security" id="security" pattern="[0-9]{3,4}" aria-required="true" required>
-								<div class="validation" id="securityValidation"></div>
-								<div id="securityImg" title="Security code image"></div>
-							</li>
-							<li>
-								<label for="month year">Expiration date</label>
-								<select name="month" id="month" aria-label="Month" aria-required="true" required>
-									<option value="" disabled="disabled" selected>Month</option>
-									<option value="January">January</option>
-									<option value="February">February</option>
-									<option value="March">March</option>
-									<option value="April">April</option>
-									<option value="May">May</option>
-									<option value="June">June</option>
-									<option value="July">July</option>
-									<option value="August">August</option>
-									<option value="September">September</option>
-									<option value="October">October</option>
-									<option value="November">November</option>
-									<option value="December">December</option>
+			<li>
+				<fieldset>
+					<legend><h2 id="paymentHeader">Finally, enter your payment information</h2></legend>
+					<a href="">Use PayPal</a>
+					<ul aria-labelledby="accountHeading">
+						<li>
+							<label for="cardNumber">Card number</label>
+							<input type="text" name="cardNumber" id="cardNumber" title="Please enter a valid card number." pattern="[0-9]{13,16}" aria-required="true" required>
+							<div class="validation"></div>
+							<ul class="card-list">
+								<label for="credit-card">Select a credit card</label>
+								<li>
+									<label>
+									<input type="radio" name="credit-card" id="amex" required = "required">
+									<span>American Express</span>
+									</label>
+								</li>
+								<li>
+									<label>
+									<input type="radio" name="credit-card" id="visa">
+									<span>Visa</span>
+									</label>
+								</li>
+								<li>
+									<label>
+									<input type="radio" name="credit-card" id="discover">
+									<span>Discover</span>
+									</label>
+								</li>
+								<li>
+									<label>
+									<input type="radio" name="credit-card" id="mastercard">
+									<span>Mastercard</span>
+									</label>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<label for="security">Security code</label>
+							<input type="text" name="security" id="security" pattern="[0-9]{3,4}" aria-required="true" required>
+							<div class="validation" id="securityValidation"></div>
+							<div id="securityImg" title="Security code image"></div>
+						</li>
+						<li>
+							<label>Expiration date</label>
+							<select name="month" id="month" aria-label="Month" aria-required="true" required>
+								<option disabled="disabled" selected>Month</option>
+								<option>January</option>
+								<option>February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+							<select name="Year" id="year" aria-label="Year" aria-required="true" required>
+								<option value="" disabled="disabled" selected>Year</option>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+								<option value="2023">2023</option>
+								<option value="2024">2024</option>
+								<option value="2025">2025</option>
+								<option value="2026">2026</option>
+								<option value="2027">2027</option>
+								<option value="2028">2028</option>
+								<option value="2029">2029</option>
+								<option value="2030">2030</option>
 								</select>
-								<select name="Year" id="year" aria-label="Year" aria-required="true" aria-required="true" required>
-									<option value="" disabled="disabled" selected>Year</option>
-									<option value="2013">2013</option>
-									<option value="2014">2014</option>
-									<option value="2015">2015</option>
-									<option value="2016">2016</option>
-									<option value="2017">2017</option>
-									<option value="2018">2018</option>
-									<option value="2019">2019</option>
-									<option value="2020">2020</option>
-									<option value="2021">2021</option>
-									<option value="2022">2022</option>
-									<option value="2023">2023</option>
-									<option value="2024">2024</option>
-									<option value="2025">2025</option>
-									<option value="2026">2026</option>
-									<option value="2027">2027</option>
-									<option value="2028">2028</option>
-									<option value="2029">2029</option>
-									<option value="2030">2030</option>
-								</select>
-							</li>
-						</ul>
-					</fieldset>
-				</li>
+						</li>
+					</ul>
+				</fieldset>
+			</li>
 
 			</ol>
 
@@ -132,5 +150,5 @@
 	</form>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/script.js"></script>
-	</body>
+</body>
 </html>
