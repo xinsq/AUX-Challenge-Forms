@@ -308,14 +308,6 @@ input[type="radio"]:checked+label {
 	background: #f3f5f5 url('../images/sprite.png') no-repeat -144px -122px;
 
 }
-/*#creditCardImg {
-	content: "";
-	margin-left: 10px;
-	width: 189px;
-	height: 32px;
-	display: inline-block;
-	background: url('../images/sprite.png') no-repeat 0 -122px;
-}*/
 
 #security {
 	width: 78px;
