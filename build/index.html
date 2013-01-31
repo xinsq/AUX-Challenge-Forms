@@ -4,11 +4,10 @@
 		<title>Challenge 0: Xin Xin</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<script src="js/modernizr.min.js"></script>
-		<script src="js/parsley-standalone.min.js"></script>
 	</head>
 <body>
 
-		<form id="signUp" data-validate="parsley" novalidate>
+		<form id="signUp" data-validate="parsley">
 
 			<header role="banner">
 				<h1>Sign up for Whoo!</h1>
@@ -21,13 +20,13 @@
 					<ul aria-labelledby="portfolioHeading">
 						<li>
 							<label for="title">Portfolio title</label>
-							<input type="text" id="title" name="title" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<input type="text" id="title" name="title" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true">
 							<div class="validation"></div>
 						</li>
 						<li>
 							<label for="address">Portfolio address</label>
 							<span id="sample">.sample.com</span>
-							<input type="text" id="address" name="address" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<input type="text" id="address" name="address" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true">
 							<div class="validation"></div>
 
 						</li>
@@ -41,18 +40,18 @@
 					<ul aria-labelledby="accountHeading">
 						<li>
 							<label for="name">Name</label>
-							<input type="text" id="name" name="name" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<input type="text" id="name" name="name" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true">
 							<div class="validation"></div>
 						</li>
 						<li>
 							<label for="email">Email</label>
-							<input type="email" id="email" name="email" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<input type="email" id="email" name="email" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true">
 							<div class="validation"></div>
 							<p>NOTE: We'll never share your email, promise.</p>
 						</li>
 						<li>
 							<label for="password">Password</label>
-							<input type="password" name="password" id="password" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<input type="password" name="password" id="password" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true">
 							<div class="validation"></div>
 						</li>
 					</ul>
@@ -66,7 +65,7 @@
 					<ul aria-labelledby="accountHeading">
 						<li class="clearfix">
 							<label for="cardNumber">Card number</label>
-							<input type="text" name="cardNumber" id="cardNumber" pattern="[0-9]{13,16}" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<input type="text" name="cardNumber" id="cardNumber" pattern="[0-9]{13,16}" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true" data-regexp="[0-9]{13,16}">
 							<div class="validation"></div>
 							<ul id="cardList">
 								<label>Select a credit card</label>
@@ -90,13 +89,13 @@
 						</li>
 						<li id="securityCodeLi" class="clearfix">
 							<label for="security">Security code</label>
-							<input type="text" name="security" id="security" pattern="[0-9]{3,4}" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<input type="text" name="security" id="security" pattern="[0-9]{3,4}" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true" data-regexp="[0-9]{3,4}">
 							<div class="validation"></div>
 							<div id="securityImg" title="Security code image"></div>
 						</li>
 						<li>
 							<label id="expiration">Expiration date</label>
-							<select name="month" id="month" aria-label="Month" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<select name="month" id="month" aria-label="Month" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true">
 								<option disabled="disabled" selected>Month</option>
 								<option>January</option>
 								<option>February</option>
@@ -111,7 +110,7 @@
 								<option>November</option>
 								<option>December</option>
 							</select>
-							<select name="Year" id="year" aria-label="Year" aria-required="true" required data-trigger="focusout" data-validation-minlength="0" data-required="true">
+							<select name="Year" id="year" aria-label="Year" aria-required="true" required data-trigger="focusout" data-validation-minlength="1" data-required="true">
 								<option value="" disabled="disabled" selected>Year</option>
 								<option value="2013">2013</option>
 								<option value="2014">2014</option>
@@ -131,7 +130,7 @@
 								<option value="2028">2028</option>
 								<option value="2029">2029</option>
 								<option value="2030">2030</option>
-								</select>
+							</select>
 						</li>
 					</ul>
 				</fieldset>
@@ -142,7 +141,7 @@
 			<input type="submit" value="Create your own portfolio" role="button">
 
 	</form>
-	<script src="js/jquery.min.js"></script>
+	<script src="js/parsley-standalone.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

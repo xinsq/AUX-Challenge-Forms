@@ -1,8 +1,12 @@
 (function () {
 
+// <script src="js/parsley-standalone.min.js"></script>
+
+if (Modernizerl.input.)
+
 	function displayCardType() {
 	// Get credit card value and strip all non-numerical characters
-	var cardNumber = $('#cardNumber').val().replace(/\D/g,'');
+	var cardNumber = document.getElementById('cardNumber').value.replace(/\D/g,'');
 
 	// Reset position values
 	document.getElementById('amexLabel').style.backgroundPosition='0 -206px';
@@ -13,7 +17,7 @@
 
 	// MasterCard start with 51 through 55 and have 16 digits
 	if (/^5[1-5]/.test(cardNumber)) {
-		document.getElementById('mastercardLabel').style.backgroundPosition='-144px -122px';
+		document.getElementById('mastercard').style.backgroundPosition='-144px -122px';
 		document.getElementById('securityImg').style.backgroundPosition='0 -374px';
 
 	}
@@ -26,6 +30,7 @@
 
 	// American Express start with 34 or 37 and have 15 digits
 	else if (/^3[47]/.test(cardNumber)) {
+		// document.getElementById('amex').setAttribute("checked");
 		document.getElementById('amexLabel').style.backgroundPosition='0 -122px';
 		document.getElementById('securityImg').style.backgroundPosition='0 -331px';
 	}
