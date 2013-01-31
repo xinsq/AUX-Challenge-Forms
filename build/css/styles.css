@@ -178,7 +178,7 @@ input:focus:invalid + .validation,  input:focus:valid + .validation{
 	width: 19px;
 	height: 19px;
 	position: absolute;
-	top: 30px;
+	top: 28px;
 	left: 414px;
 }
 
@@ -196,6 +196,7 @@ input:focus:valid + .validation {
 
 #cardNumber {
 	width: 238px;
+	float: left;
 }
 
 #cardNumber + .validation {
@@ -204,15 +205,87 @@ input:focus:valid + .validation {
 
 #security {
 	width: 78px;
+	float: left;
 }
 
 #security + .validation {
 	left: 54px;
 }
 
-*:focus {
-	opacity: .5;
+#payment>ul>li:first-of-type, #securityCodeLi {
+	overflow: hidden;
 }
+
+#cardList>label, #cardList span {
+	position: absolute;
+	left: -999px;
+}
+
+#cardList li {
+	float: left;
+	margin-left: 3px;
+}
+
+#cardList li:first-of-type {
+	margin-left: 10px;
+}
+
+#cardList li {
+	position: relative;
+}
+
+#amexLabel, #discoverLabel, #visaLabel, #mastercardLabel {
+	width: 45px;
+	height: 32px;
+	display: inline-block;
+	background: #f3f5f5 url('../images/sprite.png') no-repeat 0px 0px;
+}
+
+#amexLabel {
+	background-position: 0px -206px;
+}
+
+#visaLabel {
+	background-position: -48px -164px;
+}
+
+#discoverLabel {
+	background-position: -96px -164px;
+}
+
+#mastercardLabel {
+	background-position: -144px -164px;
+}
+
+#cardList input[type="radio"] {
+	position: absolute;
+	left: -999px;
+}
+
+input[type="radio"]:checked + #amexLabel {
+	background-position: 0px -122px;
+}
+
+input[type="radio"]:checked + #visaLabel {
+	background-position: -48px -122px;
+}
+
+input[type="radio"]:checked + #discoverLabel {
+	background-position: -96px -122px;
+}
+
+input[type="radio"]:checked + #mastercardLabel {
+	background-position: -144px -122px;
+}
+
+#securityImg {
+	width: 70px;
+	height: 33px;
+	margin-left: 10px;
+	float: left;
+	background: #f3f5f5 url('../images/sprite.png') no-repeat 0px -80px;
+}
+
 
 input[type='submit'] {
 	margin: auto;

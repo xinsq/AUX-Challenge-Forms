@@ -3,6 +3,8 @@
 	<head>
 		<title>Challenge 0: Xin Xin</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<script src="js/modernizr.min.js"></script>
+		<script src="js/parsley-standalone.min.js"></script>
 	</head>
 <body>
 
@@ -58,7 +60,7 @@
 			</li>
 
 			<li>
-				<fieldset>
+				<fieldset id="payment">
 					<legend><h2 id="paymentHeader">Finally, enter your payment information</h2></legend>
 					<a href="">Use PayPal</a>
 					<ul aria-labelledby="accountHeading">
@@ -66,35 +68,27 @@
 							<label for="cardNumber">Card number</label>
 							<input type="text" name="cardNumber" id="cardNumber" title="Please enter a valid card number." pattern="[0-9]{13,16}" aria-required="true" required>
 							<div class="validation"></div>
-							<ul class="card-list">
-								<label for="credit-card">Select a credit card</label>
+							<ul id="cardList">
+								<label>Select a credit card</label>
 								<li>
-									<label>
-									<input type="radio" name="credit-card" id="amex" required = "required">
-									<span>American Express</span>
-									</label>
+									<input type="radio" name="creditCard" id="amex" required = "required">
+									<label id="amexLabel" for="amex"><span>American Express</span></label>
 								</li>
 								<li>
-									<label>
-									<input type="radio" name="credit-card" id="visa">
-									<span>Visa</span>
-									</label>
+									<input type="radio" name="creditCard" id="visa">
+									<label id="visaLabel" for="visa"><span>Visa</span></label>
 								</li>
 								<li>
-									<label>
-									<input type="radio" name="credit-card" id="discover">
-									<span>Discover</span>
-									</label>
+									<input type="radio" name="creditCard" id="discover">
+									<label id="discoverLabel" for="discover"><span>Discover</span></label>
 								</li>
 								<li>
-									<label>
-									<input type="radio" name="credit-card" id="mastercard">
-									<span>Mastercard</span>
-									</label>
+									<input type="radio" name="creditCard" id="mastercard">
+									<label id="mastercardLabel" for="mastercard"><span>Mastercard</span></label>
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li id="securityCodeLi">
 							<label for="security">Security code</label>
 							<input type="text" name="security" id="security" pattern="[0-9]{3,4}" aria-required="true" required>
 							<div class="validation" id="securityValidation"></div>

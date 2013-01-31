@@ -1,44 +1,43 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 
-// var type = "none";
 
-// function displayCardType() {
+function displayCardType() {
+	// Get credit card value and strip all non-numerical characters
+	var cardNumber = $('#cardNumber').val().replace(/\D/g,'');
 
-// 	// Get credit card value and strip all non-numerical characters
-// 	var cardNumber = $('#cardNumber').val().replace(/\D/g,'');
+	// Reset position values
+	document.getElementById('amexLabel').style.backgroundPosition='0 -206px';
+	document.getElementById('visaLabel').style.backgroundPosition='-48px -164px';
+	document.getElementById('discoverLabel').style.backgroundPosition='-96px -164px';
+	document.getElementById('mastercardLabel').style.backgroundPosition='-144px -164px';
+	document.getElementById('securityImg').style.backgroundPosition='0 -80px';
 
-// 	$('#creditCardImg').css({'background-position':'0 -122px'});
-// 	// Visa card numbers start with a 4
-// 	// MasterCard start with 51 through 55 and have 16 digits
-// 	// American Express start with 34 or 37 and have 15 digits
-// 	// Discover start with 6011 or 65. All have 16 digits
+	// MasterCard start with 51 through 55 and have 16 digits
+	if (/^5[1-5]/.test(cardNumber)) {
+		document.getElementById('mastercardLabel').style.backgroundPosition='-144px -122px';
+		document.getElementById('securityImg').style.backgroundPosition='0 -374px';
 
-// 	if (/^5[1-5]/.test(cardNumber)) {
-// 		type = "mastercard";
-// 		$('#creditCardImg').css({'background-position':'0 -290px'});
-// 	}
-// 	else if (/^4/.test(cardNumber)) {
-// 		type = "visa";
-// 		$('#creditCardImg').css({'background-position':'0 -206px'});
-// 	}
-// 	else if (/^3[47]/.test(cardNumber)) {
-// 		type = "americanexpress";
-// 		$('#creditCardImg').css({'background-position':'0 -164px'});
-// 		$('#securityImg').css({'background':'url("../images/sprite.png") no-repeat 0 -331px'})
-// 	}
-// 	else if (/^6/.test(cardNumber)) {
-// 		type = "discover";
-// 		$('#creditCardImg').css({'background-position':'0 -248px'});
-// 	}
+	}
 
-// 	else {
-// 		return;
-// 	}
-// }
+	// Visa card numbers start with a 4
+	else if (/^4/.test(cardNumber)) {
+		document.getElementById('visaLabel').style.backgroundPosition='-48px -122px';
+		document.getElementById('securityImg').style.backgroundPosition='0 -374px';
+	}
 
-// //background: url('../images/sprite.png') no-repeat 0 -331px;
+	// American Express start with 34 or 37 and have 15 digits
+	else if (/^3[47]/.test(cardNumber)) {
+		document.getElementById('amexLabel').style.backgroundPosition='0 -122px';
+		document.getElementById('securityImg').style.backgroundPosition='0 -331px';
+	}
 
-// $('#cardNumber').bind('keyup', displayCardType);
-// $('#card')
+	// Discover start with 6011 or 65. All have 16 digits
+	else if (/^6/.test(cardNumber)) {
+		document.getElementById('discoverLabel').style.backgroundPosition='-96px -122px';
+		document.getElementById('securityImg').style.backgroundPosition='0 -374px';
+	}
+}
 
-// });
+document.getElementById('cardNumber').addEventListener('keyup', displayCardType);
+
+});
