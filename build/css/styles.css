@@ -12,6 +12,24 @@ html, body, div, span, h1, h2, p, a, li, ul, ol, fieldset, form, label, input, l
 	vertical-align: baseline;
 }
 
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -37,7 +55,7 @@ p {
 	margin-top: 10px;
 }
 
-form legend:before {
+form legend:before, .parsley-error-list {
 	-moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
@@ -174,7 +192,7 @@ fieldset>ul>li>input, #portfolioField span {
 	text-align: center;
 }
 
-input:focus:invalid + .validation,  input:focus:valid + .validation{
+/*input:focus:invalid + .validation,  input:focus:valid + .validation{
 	width: 19px;
 	height: 19px;
 	position: absolute;
@@ -191,7 +209,7 @@ input:focus:valid + .validation {
 }
 
 #address + .validation {
-	left: 264px;
+	left: 264px;*/
 }
 
 #cardNumber {
@@ -212,8 +230,17 @@ input:focus:valid + .validation {
 	left: 54px;
 }
 
-#payment>ul>li:first-of-type, #securityCodeLi {
-	overflow: hidden;
+/*#payment>ul>li:first-of-type, #securityCodeLi, #expiration {
+	clear: both;
+}*/
+
+.cf {
+	clear: both;
+}
+
+#cardList {
+	left: 240px;
+	position: absolute;
 }
 
 #cardList>label, #cardList span {
@@ -281,11 +308,10 @@ input[type="radio"]:checked + #mastercardLabel {
 #securityImg {
 	width: 70px;
 	height: 33px;
-	margin-left: 10px;
-	float: left;
-	background: #f3f5f5 url('../images/sprite.png') no-repeat 0px -80px;
+	position: absolute;
+	left: 90px;
+	background: #f3f5f5 url('../images/sprite.png') no-repeat 0px -80px;*/
 }
-
 
 input[type='submit'] {
 	margin: auto;
@@ -300,3 +326,34 @@ input[type='submit'] {
 	color: #ffffff;
 	display: block;
 }
+
+.parsley-error-list {
+	width: 100%;
+	background-color: red;
+	float: right;
+	padding: 7px;
+	margin-top: 7px;
+	postion: absolute;
+	display: inline-block;
+}
+
+/*input:focus:invalid + .validation,  input:focus:valid + .validation{
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	top: 28px;
+	left: 414px;
+}
+
+input:focus:invalid + .validation {
+	background: url('../images/sprite.png') no-repeat -2px -499px;
+}
+
+input:focus:valid + .validation {
+	background: url('../images/sprite.png') no-repeat -31px -499px;
+}
+
+#address + .validation {
+	left: 264px;*/
+
+

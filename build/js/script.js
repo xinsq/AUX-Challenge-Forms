@@ -1,7 +1,6 @@
-$(document).ready(function(){
+(function () {
 
-
-function displayCardType() {
+	function displayCardType() {
 	// Get credit card value and strip all non-numerical characters
 	var cardNumber = $('#cardNumber').val().replace(/\D/g,'');
 
@@ -40,4 +39,4 @@ function displayCardType() {
 
 document.getElementById('cardNumber').addEventListener('keyup', displayCardType);
 
-});
+})();
