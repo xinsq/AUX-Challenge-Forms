@@ -40,11 +40,8 @@
 document.getElementById('cardNumber').addEventListener('keyup', displayCardType);
 
 Modernizr.load({
-	{
-		test: Modernizr.input.required,
-		nope: ['parsley.min.js']
-	}
-
+	test: Modernizr.input.required,
+	nope: 'parsley.min.js'
 });
 
 })();
