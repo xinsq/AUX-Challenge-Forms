@@ -79,7 +79,6 @@ form>header {
 	background: -webkit-linear-gradient(top, #167893 0%,#125e77 100%);
 }
 
-
 form>header h1 {
 	color: #f1fcff;
 	font-size: 36px;
@@ -192,7 +191,7 @@ fieldset>ul>li>input, #portfolioField span {
 	text-align: center;
 }
 
-input:focus:invalid + .validation,  input:focus:valid + .validation{
+input:focus:invalid + .validation,  input:focus:valid + .validation {
 	width: 19px;
 	height: 19px;
 	position: absolute;
@@ -363,6 +362,7 @@ input[type='submit'] {
 	background: url('../images/sprite.png') no-repeat -2px -499px;
 	display: inline-block;
 }
+
 
 #month, #year {
 	height: 32px;

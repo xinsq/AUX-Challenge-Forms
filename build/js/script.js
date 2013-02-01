@@ -1,64 +1,62 @@
 (function () {
 
-function getCardType(accountNumber) {
-  var result = "unknown";
-
-  if (/^5[1-5]/.test(accountNumber)) // MasterCard start with 51 through 55 and have 16 digits
-  { result = "mastercard";}
-
-  else if (/^4/.test(accountNumber)) // Visa card numbers start with a 4
-  { result = "visa";}
-
-  else if (/^3[47]/.test(accountNumber)) // American Express start with 34 or 37 and have 15 digits
-  { result = "amex";}
-
-  else if (/^6/.test(accountNumber)) // Discover start with 6011 or 65. All have 16 digits
-  { result = "discover";}
-
-  return result;
+var cardHolder = {
+  "mastercard": /^5[1-5]/, // MasterCard start with 51 through 55 and have 16 digits
+  "visa": /^4/, // Visa card numbers start with a 4
+  "amex": /^3[47]/, // American Express start with 34 or 37 and have 15 digits
+  "discover": /^6/ // Discover start with 6011 or 65. All have 16 digits
 }
 
 function setCardType(event) {
-	var value = event.target.value,
-		type = getCardType(value);
+  var cardNumber = event.target.value.replace(/\D/g,''); // Strip non-zero numbers from value
 
-	switch (type)
-	{
-		case "mastercard":
-		document.getElementById("mastercard").checked="true";
-		document.getElementById('securityImg').style.backgroundPosition='0 -374px';
-        break;
+  function setCardStatus(card, checkedStatus) { // set checked status of an object
+    document.getElementById(card).checked = checkedStatus;
+  }
 
-    	case "visa":
-		document.getElementById("visa").checked="true";
-		document.getElementById('securityImg').style.backgroundPosition='0 -374px';
-        break;
-
-    	case "discover":
-        document.getElementById("discover").checked="true";
-		document.getElementById('securityImg').style.backgroundPosition='0 -374px';
-        break;
-
-        case "amex":
-        document.getElementById("amex").checked="true";
-		document.getElementById('securityImg').style.backgroundPosition='0 -331px';
-        break;
-
-   		default:
-   		document.getElementById("mastercard").checked="false";
-   		document.getElementById("visa").checked="false";
-   		document.getElementById("discover").checked="false";
-   		document.getElementById("amex").checked="false";
-   		document.getElementById('securityImg').style.backgroundPosition='0 -80px';
-	}
+  for(var card in cardHolder) { // Loop through the properties of card Holder
+    setCardStatus(card,false); // Set checked status to false initially
+    if(cardHolder[card].test(cardNumber)) { setCardStatus(card,true); } // Test the value of the card number, set to true if there's a match
+  }
 }
 
 document.getElementById('cardNumber').addEventListener('keyup', setCardType);
-document.getElementById('cardNumber').addEventListener('blur', setCardType);
+document.getElementById('cardNumber').addEventListener('blur', setCardType); // Focus correctly if numbers are pasted
 
-Modernizr.load({
+Modernizr.load({ // Parsley javascript fallback if no HTML5 inputs
 	test: Modernizr.input.required,
 	nope: 'parsley-standalone.min.js'
 });
 
-})();
+})(); // End anonymous function
+
+//  Validate to see if the credit card number is real
+function validateNumber() {
+  var cardNumber = document.getElementById("cardNumber").value.replace(/\D/g,'');
+
+  function luhn(ccnumber) {
+    var cc_sum = 0;
+    var parsedCC;
+    var cclen = ccnumber.length;
+    for (i=cclen-1; i>=0; i--) {
+            var charati = ccnumber[i] + '';
+            parsedCC = parseInt(charati);
+            var oddeven = cclen-1 - i;
+            cc_sum += (oddeven%2 == 0) ? parsedCC :
+                            (parsedCC > 4) ? parsedCC * 2 % 10 + 1 :
+                                    parsedCC * 2;
+    }
+    var checkvalid = ((cc_sum % 10) == 0) ? true : false;
+    return checkvalid;
+  }
+
+  if(luhn(cardNumber)==false) {
+    document.getElementById('cardNumber').toggleClass(invalid);
+    alert('Sorry, that was not a valid credit card number');
+    return false;
+  }
+
+  alert('Success!');
+  return true;
+
+}
