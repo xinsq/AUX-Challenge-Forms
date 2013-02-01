@@ -51,7 +51,6 @@ function validateNumber() {
   }
 
   if(luhn(cardNumber)==false) {
-    document.getElementById('cardNumber').toggleClass(invalid);
     alert('Sorry, that was not a valid credit card number');
     return false;
   }
