@@ -157,7 +157,7 @@ fieldset>a {
 }
 
 label {
-	cursor: hand;
+	cursor: pointer;
 }
 
 fieldset>ul>li>label {
@@ -310,7 +310,7 @@ input[type="radio"]:checked + #mastercardLabel {
 	height: 33px;
 	position: absolute;
 	left: 90px;
-	background: #f3f5f5 url('../images/sprite.png') no-repeat 0px -80px;*/
+	background: #f3f5f5 url('../images/sprite.png') no-repeat 0px -80px;
 }
 
 input[type='submit'] {
@@ -346,7 +346,6 @@ input[type='submit'] {
 
 .parsley-error-list::before {
 	content: "";
-	height 0;
 	position: absolute;
 	width: 0;
 	top: -15px;
